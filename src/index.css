@@ -35,6 +35,10 @@ a:hover {
   color: teal;
 }
 
+.project-card {
+  margin-bottom: 2rem;
+}
+
 .project-card:hover .card-img {
   opacity: 0.5;
   transition: 2s;
