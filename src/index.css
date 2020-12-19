@@ -1,13 +1,46 @@
+:root {
+  --indigo-dye: #2b4162ff;
+  --deep-space-sparkle: #385f71ff;
+  --magnolia: #f5f0f6ff;
+  --burlywood: #d7b377ff;
+  --french-bistre: #8f754fff;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--indigo-dye);
+  color: var(--burlywood);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  color: var(--french-bistre);
+}
+
+a:hover {
+  color: var(--magnolia);
+}
+
+.card-overlay {
+  opacity: 0;
+  color: teal;
+}
+
+.project-card:hover .card-img {
+  opacity: 0.5;
+  transition: 2s;
+}
+
+.project-card:hover .card-overlay {
+  opacity: 1;
+  transition: 2s;
 }
