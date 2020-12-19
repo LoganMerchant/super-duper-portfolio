@@ -5,7 +5,6 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
 import Footer from "./components/Footer";
-import Project from "./components/Project";
 import Portfolio from "./components/Portfolio";
 
 function App() {
@@ -23,15 +22,19 @@ function App() {
         return <Contact />;
       case "Resume":
         return <Resume />;
+      default:
+        return "About";
     }
   }
 
   return (
     <div>
-      <Nav setCurrentNavItem={setCurrentNavItem} navItems={navItems} />
-      <main>
-        {renderPage(currentNavItem)}
-      </main>
+      <Nav
+        currentNavItem={currentNavItem}
+        setCurrentNavItem={setCurrentNavItem}
+        navItems={navItems}
+      />
+      <main>{renderPage(currentNavItem)}</main>
       <Footer />
     </div>
   );
