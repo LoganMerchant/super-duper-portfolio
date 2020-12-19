@@ -1,6 +1,6 @@
 import React from "react";
 
-function Nav() {
+function Nav({ setCurrentNavItem, navItems }) {
   return (
     <header>
       <h2>
@@ -8,18 +8,11 @@ function Nav() {
       </h2>
       <nav>
         <ul>
-          <li>
-            <span>About</span>
-          </li>
-          <li>
-            <span>Portfolio</span>
-          </li>
-          <li>
-            <span>Contact</span>
-          </li>
-          <li>
-            <span>Resume</span>
-          </li>
+          {navItems.map((item, index) => (
+            <li key={index}>
+              <span onClick={() => setCurrentNavItem(item)}>{item}</span>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

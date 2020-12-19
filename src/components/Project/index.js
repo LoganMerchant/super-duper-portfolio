@@ -11,7 +11,7 @@ function Project() {
       <Col sm={4}>
         <Card className="project-card">
           <Card.Img
-            src={require("../../assets/images/demo.gif").default}
+            src={require("../../assets/images/project-images/demo.gif").default}
             alt="here we are"
             className="card-img"
           />

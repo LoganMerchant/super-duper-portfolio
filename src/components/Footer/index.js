@@ -8,7 +8,7 @@ import {
 
 function Footer() {
   return (
-    <div>
+    <footer>
       <a href="https://github.com/LoganMerchant">
         <FontAwesomeIcon icon={faGithubSquare} />
       </a>
@@ -18,7 +18,7 @@ function Footer() {
       <a href="https://twitter.com/bizzybark">
         <FontAwesomeIcon icon={faTwitterSquare} />
       </a>
-    </div>
+    </footer>
   );
 }
 
