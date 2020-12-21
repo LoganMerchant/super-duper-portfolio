@@ -72,7 +72,7 @@ function Project() {
             <div className="card-overlay">
               <Card.ImgOverlay>
                 <Card.Title>
-                  <h1>
+                  <h1 className="project-name">
                     <a
                       href={project.linkToProject}
                       target="_blank"
@@ -89,11 +89,11 @@ function Project() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <FontAwesomeIcon icon={faGithub} />
+                      <FontAwesomeIcon icon={faGithub} className="project-icon"/>
                     </a>
                   </h3>
                 </Card.Subtitle>
-                <Card.Text>{project.description}</Card.Text>
+                <Card.Text className="project-description">{project.description}</Card.Text>
               </Card.ImgOverlay>
             </div>
           </Card>

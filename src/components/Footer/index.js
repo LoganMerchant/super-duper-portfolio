@@ -10,13 +10,13 @@ function Footer() {
   return (
     <footer>
       <a href="https://github.com/LoganMerchant">
-        <FontAwesomeIcon icon={faGithubSquare} />
+        <FontAwesomeIcon icon={faGithubSquare} className="footer-icon" />
       </a>
       <a href="https://www.linkedin.com/in/loganmerchant/">
-        <FontAwesomeIcon icon={faLinkedin} />
+        <FontAwesomeIcon icon={faLinkedin} className="footer-icon" />
       </a>
       <a href="https://twitter.com/bizzybark">
-        <FontAwesomeIcon icon={faTwitterSquare} />
+        <FontAwesomeIcon icon={faTwitterSquare} className="footer-icon" />
       </a>
     </footer>
   );

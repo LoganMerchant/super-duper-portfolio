@@ -7,14 +7,12 @@ function Nav({ currentNavItem, setCurrentNavItem, navItems }) {
 
   return (
     <header>
-      <h2>
-        <a href="/">Logan Merchant</a>
-      </h2>
+      <h1 className="home">Logan Merchant</h1>
       <nav>
-        <ul>
+        <ul className="navigation">
           {navItems.map((item, index) => (
-            <li key={index}>
-              <span onClick={() => setCurrentNavItem(item)}>{item}</span>
+            <li key={index} className={`${ currentNavItem === item && "navActive"}`}>
+              <h3 onClick={() => setCurrentNavItem(item)}>{item}</h3>
             </li>
           ))}
         </ul>

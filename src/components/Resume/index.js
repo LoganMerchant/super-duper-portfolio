@@ -2,9 +2,10 @@ import React from "react";
 
 function Resume() {
   return (
-    <section>
+    <section className="title">
       <div>
-        <h4>
+        <h2>Resume</h2>
+        <p>
           Download a PDF version{" "}
           <a
             href={require("../../assets/downloadable-files/resume.pdf").default}
@@ -13,7 +14,7 @@ function Resume() {
             <span>here</span>
           </a>
           !
-        </h4>
+        </p>
       </div>
       <div>
         <h3>Front-End Proficiencies</h3>

@@ -4,9 +4,14 @@ import Container from "react-bootstrap/Container";
 
 function Portfolio() {
   return (
-    <Container>
-      <Project />
-    </Container>
+    <section>
+      <div className="title">
+        <h2>Portfolio</h2>
+      </div>
+      <Container>
+        <Project />
+      </Container>
+    </section>
   );
 }
 
