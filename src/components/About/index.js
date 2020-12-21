@@ -6,7 +6,7 @@ function About() {
       <div className="title">
         <h2>About Me</h2>
         <img
-          src={require("../../assets/images/self.jpg").default}
+          src={require("../../assets/images/misc/self.jpg").default}
           alt="Logan posing in front of Lake Michigan."
         />
       </div>
