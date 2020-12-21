@@ -23,10 +23,70 @@ code {
 }
 
 a {
-  color: var(--french-bistre);
+  color: var(--magnolia);
 }
 
 a:hover {
+  color: var(--magnolia);
+}
+
+.navActive {
+  color: var(--magnolia);
+  border-bottom: 2px solid var(--french-bistre);
+}
+
+.home {
+  text-align: center;
+  padding: 50px;
+  border: 100px;
+  border-color: black;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-bottom: 50px;
+}
+
+.title {
+  display: flex;
+  padding-bottom: 50px;
+  justify-content: space-around;
+}
+
+.title h2 {
+  font-size: 75px;
+}
+
+.title img {
+  max-width: 25%;
+}
+
+.title form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.title form label {
+  font-size: 20px;
+  padding-right:10px;
+}
+
+.title p {
+  font-size: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 20px;
+}
+
+.navigation li:hover {
   color: var(--magnolia);
 }
 
@@ -37,14 +97,41 @@ a:hover {
 
 .project-card {
   margin-bottom: 2rem;
+  font-size: 20px;
+}
+
+.project-card a {
+  color: var(--deep-space-sparkle);
+}
+
+.project-name {
+  font-size: 50px;
+}
+
+.project-icon {
+  font-size: 50px;
+}
+
+.project-description {
+  color: var(--deep-space-sparkle);
 }
 
 .project-card:hover .card-img {
-  opacity: 0.5;
-  transition: 2s;
+  opacity: 0.20;
+  transition: 1s;
 }
 
 .project-card:hover .card-overlay {
   opacity: 1;
-  transition: 2s;
+  transition: 1s;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-icon {
+  font-size: 75px;
 }
