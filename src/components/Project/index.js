@@ -8,6 +8,13 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 function Project() {
   const [projects] = useState([
     {
+      name: "AuthorHub",
+      description: `A MERN progressive web application that is best described as "The GitHub for Authors".`,
+      linkToProject: "https://vast-gorge-54301.herokuapp.com/",
+      linkToGitHub: "https://github.com/ChazzKreutzkamp/author-hub",
+      linkToImage: require("../../assets/images/project-images/authorhub.gif"),
+    },
+    {
       name: "All Leaf, No Beef",
       description:
         "A personal gardening tracking website, built with Express.js, a MySQL database, and More!",
@@ -32,14 +39,6 @@ function Project() {
       linkToProject: "https://github.com/LoganMerchant/feedme-a-readme",
       linkToGitHub: "https://github.com/LoganMerchant/feedme-a-readme",
       linkToImage: require("../../assets/images/project-images/feedme-a-readme.gif"),
-    },
-
-    {
-      name: "Budget to Go",
-      description: "A PWA for tracking a user's financial status.",
-      linkToProject: "https://infinite-cove-94181.herokuapp.com/",
-      linkToGitHub: "https://github.com/LoganMerchant/budget-to-go",
-      linkToImage: require("../../assets/images/project-images/budget-to-go.gif"),
     },
     {
       name: "Password Generator",
@@ -89,11 +88,16 @@ function Project() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <FontAwesomeIcon icon={faGithub} className="project-icon"/>
+                      <FontAwesomeIcon
+                        icon={faGithub}
+                        className="project-icon"
+                      />
                     </a>
                   </h3>
                 </Card.Subtitle>
-                <Card.Text className="project-description">{project.description}</Card.Text>
+                <Card.Text className="project-description">
+                  {project.description}
+                </Card.Text>
               </Card.ImgOverlay>
             </div>
           </Card>
