@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+
 import "./App.css";
 import Nav from "./components/Nav";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Resume from "./components/Resume";
 import Footer from "./components/Footer";
-import Portfolio from "./components/Portfolio";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   const [navItems] = useState(["About", "Portfolio", "Contact", "Resume"]);
