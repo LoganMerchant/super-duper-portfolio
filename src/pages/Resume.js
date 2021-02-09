@@ -1,22 +1,25 @@
 import React from "react";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function Resume() {
   return (
-    <section className="title">
-      <div>
+    <Row>
+      <Col sm={12} md={6}>
         <h2>Resume</h2>
         <p>
           Download a PDF version{" "}
           <a
-            href={require("../../assets/downloadable-files/resume.pdf").default}
+            href={require("../assets/downloadable-files/resume.pdf").default}
             download="LoganMerchant-Resume"
           >
             <span>here</span>
           </a>
           !
         </p>
-      </div>
-      <div>
+      </Col>
+
+      <Col sm={12} md={6}>
         <h3>Front-End Proficiencies</h3>
         <ul>
           <li>HTML</li>
@@ -30,8 +33,8 @@ function Resume() {
           <li>Express.js</li>
           <li>Node.js</li>
         </ul>
-      </div>
-    </section>
+      </Col>
+    </Row>
   );
 }
 

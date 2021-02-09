@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { validateEmail, capitalizeFirstLetter } from "../../utils/helpers";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { validateEmail, capitalizeFirstLetter } from "../utils/helpers";
 
 function Contact() {
   const [errorMessage, setErrorMessage] = useState("");
@@ -41,9 +43,11 @@ function Contact() {
   }
 
   return (
-    <section>
-      <div className="title">
-        <h2>Contact Me</h2>
+    <Row>
+      <Col sm={12} md={6}>
+        <h1>Contact Me</h1>
+      </Col>
+      <Col sm={12} md={6}>
         <form id="contact-form" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name:</label>
@@ -84,8 +88,8 @@ function Contact() {
             Submit
           </button>
         </form>
-      </div>
-    </section>
+      </Col>
+    </Row>
   );
 }
 

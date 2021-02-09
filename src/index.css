@@ -49,47 +49,6 @@ a:hover {
   padding-bottom: 50px;
 }
 
-.title {
-  display: flex;
-  padding-bottom: 50px;
-  justify-content: space-around;
-}
-
-.title h2 {
-  font-size: 75px;
-}
-
-.title img {
-  max-width: 25%;
-}
-
-.title form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.title form label {
-  font-size: 20px;
-  padding-right:10px;
-}
-
-.title p {
-  font-size: 20px;
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding-bottom: 50px;
-  font-size: 20px;
-}
-
-.navigation li:hover {
-  color: var(--magnolia);
-}
-
 .card-overlay {
   opacity: 0;
   color: teal;

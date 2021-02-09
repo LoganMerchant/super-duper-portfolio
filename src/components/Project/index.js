@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -59,9 +58,9 @@ function Project() {
   ]);
 
   return (
-    <Row>
+    <>
       {projects.map((project, i) => (
-        <Col sm={6}>
+        <Col sm={12} md={6}>
           <Card className="project-card">
             <Card.Img
               src={project.linkToImage.default}
@@ -103,7 +102,7 @@ function Project() {
           </Card>
         </Col>
       ))}
-    </Row>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Container from "react-bootstrap/Container";
 
 import "./App.css";
 import Nav from "./components/Nav";
@@ -35,7 +36,9 @@ function App() {
         setCurrentNavItem={setCurrentNavItem}
         navItems={navItems}
       />
-      <main>{renderPage(currentNavItem)}</main>
+      <main>
+        <Container>{renderPage(currentNavItem)}</Container>
+      </main>
       <Footer />
     </div>
   );
