@@ -9,13 +9,25 @@ import {
 function Footer() {
   return (
     <footer>
-      <a href="https://github.com/LoganMerchant">
+      <a
+        href="https://github.com/LoganMerchant"
+        target="_blank"
+        rel="noreferrer"
+      >
         <FontAwesomeIcon icon={faGithubSquare} className="footer-icon" />
       </a>
-      <a href="https://www.linkedin.com/in/loganmerchant/">
+      <a
+        href="https://www.linkedin.com/in/loganmerchant/"
+        target="_blank"
+        rel="noreferrer"
+      >
         <FontAwesomeIcon icon={faLinkedin} className="footer-icon" />
       </a>
-      <a href="https://www.facebook.com/Vivalalogan/">
+      <a
+        href="https://www.facebook.com/Vivalalogan/"
+        target="_blank"
+        rel="noreferrer"
+      >
         <FontAwesomeIcon icon={faFacebookSquare} className="footer-icon" />
       </a>
     </footer>
