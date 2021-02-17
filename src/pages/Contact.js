@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 import { validateEmail, capitalizeFirstLetter } from "../utils/helpers";
 
 function Contact() {
+  // Tracks any errors in contact form
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Tracks the values of the contact form
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -13,6 +17,7 @@ function Contact() {
   });
   const { name, email, message } = formState;
 
+  // Handles any changes made to the contact form inputs
   function handleChange(evt) {
     if (evt.target.name === "email") {
       const isValid = validateEmail(evt.target.value);
@@ -37,6 +42,7 @@ function Contact() {
     }
   }
 
+  // Handles the form submission
   function handleSubmit(evt) {
     evt.preventDefault();
     console.log(formState);
@@ -44,50 +50,58 @@ function Contact() {
 
   return (
     <Row>
+      {/* Title */}
       <Col sm={12} md={6}>
         <h1>Contact Me</h1>
       </Col>
+
+      {/* Form */}
       <Col sm={12} md={6}>
-        <form id="contact-form" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input
+        <Form onSubmit={handleSubmit}>
+          {/* Name Input */}
+          <Form.Group controlId="name">
+            <Form.Label>Name:</Form.Label>
+            <Form.Control
               type="text"
               name="name"
-              size="52"
               defaultValue={name}
               onBlur={handleChange}
             />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
+          </Form.Group>
+
+          {/* Email Input */}
+          <Form.Group>
+            <Form.Label>Email:</Form.Label>
+            <Form.Control
               type="email"
               name="email"
-              size="52"
               defaultValue={email}
               onChange={handleChange}
             />
-          </div>
-          <div>
-            <label htmlFor="message">Message:</label>
-            <textarea
+          </Form.Group>
+
+          {/* Message Input */}
+          <Form.Group>
+            <Form.Label>Message:</Form.Label>
+            <Form.Control
+              as="textarea"
               name="message"
-              cols="50"
               rows="10"
               defaultValue={message}
               onBlur={handleChange}
             />
-          </div>
-          {errorMessage && (
-            <div>
-              <p>{errorMessage}</p>
-            </div>
-          )}
-          <button data-testid="submit-button" type="submit">
-            Submit
-          </button>
-        </form>
+          </Form.Group>
+
+          {/* Shows an error message if there is one */}
+          {errorMessage && <p>{errorMessage}</p>}
+
+          {/* Displays the submit button only if all fields are filled */}
+          {name && email && message ? (
+            <Button variant="light" type="submit">
+              Submit!
+            </Button>
+          ) : null}
+        </Form>
       </Col>
     </Row>
   );
