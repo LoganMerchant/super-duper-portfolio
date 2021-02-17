@@ -6,7 +6,7 @@ function Resume() {
   return (
     <Row>
       <Col sm={12} md={6}>
-        <h2>Resume</h2>
+        <h1>Resume</h1>
         <p>
           Download a PDF version{" "}
           <a
@@ -20,13 +20,13 @@ function Resume() {
       </Col>
 
       <Col sm={12} md={6}>
-        <h3>Front-End Proficiencies</h3>
+        <h2>Front-End Proficiencies</h2>
         <ul>
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
         </ul>
-        <h3>Back-End Proficiencies</h3>
+        <h2>Back-End Proficiencies</h2>
         <ul>
           <li>SQL Databases</li>
           <li>NoSQL Databases</li>
