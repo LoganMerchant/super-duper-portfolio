@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faTwitterSquare,
+  faFacebookSquare,
   faLinkedin,
   faGithubSquare,
 } from "@fortawesome/free-brands-svg-icons";
@@ -15,8 +15,8 @@ function Footer() {
       <a href="https://www.linkedin.com/in/loganmerchant/">
         <FontAwesomeIcon icon={faLinkedin} className="footer-icon" />
       </a>
-      <a href="https://twitter.com/bizzybark">
-        <FontAwesomeIcon icon={faTwitterSquare} className="footer-icon" />
+      <a href="https://www.facebook.com/Vivalalogan/">
+        <FontAwesomeIcon icon={faFacebookSquare} className="footer-icon" />
       </a>
     </footer>
   );
