@@ -85,6 +85,11 @@ a:hover {
   transition: 1s;
 }
 
+#resume-thumbnail:hover {
+  opacity: .75;
+  transition: .5s;
+}
+
 footer {
   display: flex;
   justify-content: space-around;
