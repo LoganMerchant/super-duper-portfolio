@@ -6,11 +6,10 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
 
 function App() {
-  const [navItems] = useState(["About", "Portfolio", "Contact", "Resume"]);
+  const [navItems] = useState(["About", "Portfolio", "Contact"]);
 
   const [currentNavItem, setCurrentNavItem] = useState("About");
 
@@ -22,15 +21,13 @@ function App() {
         return <Portfolio />;
       case "Contact":
         return <Contact />;
-      case "Resume":
-        return <Resume />;
       default:
         return "About";
     }
   }
 
   return (
-    <div>
+    <>
       <Nav
         currentNavItem={currentNavItem}
         setCurrentNavItem={setCurrentNavItem}
@@ -40,7 +37,7 @@ function App() {
         <Container>{renderPage(currentNavItem)}</Container>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

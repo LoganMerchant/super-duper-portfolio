@@ -9,12 +9,24 @@ function Nav({ currentNavItem, setCurrentNavItem, navItems }) {
     <header>
       <h1 className="home">Logan Merchant</h1>
       <nav>
+        {/* Pages */}
         <ul className="navigation">
           {navItems.map((item, index) => (
-            <li key={index} className={`${ currentNavItem === item && "navActive"}`}>
+            <a
+              key={index}
+              className={`${currentNavItem === item && "navActive"}`}
+            >
               <h3 onClick={() => setCurrentNavItem(item)}>{item}</h3>
-            </li>
+            </a>
           ))}
+
+          {/* Download resume */}
+          <a
+            href={require("../../assets/downloadable-files/resume.pdf").default}
+            download="Logan_Merchant_Resume"
+          >
+            <h3>Resume</h3>
+          </a>
         </ul>
       </nav>
     </header>

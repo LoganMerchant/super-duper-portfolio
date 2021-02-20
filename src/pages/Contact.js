@@ -52,7 +52,7 @@ function Contact() {
     <Row>
       {/* Title */}
       <Col sm={12} md={6}>
-        <h1>Contact Me</h1>
+        <h3>Contact Me</h3>
       </Col>
 
       {/* Form */}
@@ -64,6 +64,7 @@ function Contact() {
             <Form.Control
               type="text"
               name="name"
+              size="sm"
               defaultValue={name}
               onBlur={handleChange}
             />
@@ -75,6 +76,7 @@ function Contact() {
             <Form.Control
               type="email"
               name="email"
+              size="sm"
               defaultValue={email}
               onChange={handleChange}
             />
@@ -86,7 +88,8 @@ function Contact() {
             <Form.Control
               as="textarea"
               name="message"
-              rows="10"
+              rows="8"
+              size="sm"
               defaultValue={message}
               onBlur={handleChange}
             />
