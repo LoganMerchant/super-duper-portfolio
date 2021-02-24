@@ -13,6 +13,7 @@ function Nav({ currentNavItem, setCurrentNavItem, navItems }) {
         <ul className="navigation">
           {navItems.map((item, index) => (
             <a
+              href="#"
               key={index}
               className={`${currentNavItem === item && "navActive"}`}
             >
