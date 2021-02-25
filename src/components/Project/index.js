@@ -60,7 +60,7 @@ function Project() {
   return (
     <>
       {projects.map((project, i) => (
-        <Col sm={12} md={6}>
+        <Col sm={12} md={6} key={i}>
           <Card className="project-card">
             <Card.Img
               src={project.linkToImage.default}
@@ -95,7 +95,7 @@ function Project() {
                   </h4>
                 </Card.Subtitle>
                 <Card.Text className="project-description">
-                  <p>{project.description}</p>
+                  {project.description}
                 </Card.Text>
               </Card.ImgOverlay>
             </div>
