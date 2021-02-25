@@ -13,11 +13,12 @@ function Nav({ currentNavItem, setCurrentNavItem, navItems }) {
         <ul className="navigation">
           {navItems.map((item, index) => (
             <a
-              href="#"
+              href={"#" + item}
               key={index}
               className={`${currentNavItem === item && "navActive"}`}
+              onClick={() => setCurrentNavItem(item)}
             >
-              <h3 onClick={() => setCurrentNavItem(item)}>{item}</h3>
+              <h3>{item}</h3>
             </a>
           ))}
 
