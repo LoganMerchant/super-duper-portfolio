@@ -27,7 +27,8 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+.navItem:hover {
   color: var(--magnolia);
   text-decoration: none;
 }
@@ -39,16 +40,13 @@ a:hover {
 
 .home {
   text-align: center;
-  padding: 50px;
+  padding: 1em;
   border: 100px;
   border-color: black;
 }
 
 .navigation {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  padding-bottom: 50px;
+  padding-bottom: 2em;
 }
 
 .card-overlay {
