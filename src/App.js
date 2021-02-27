@@ -29,7 +29,6 @@ function App() {
   return (
     <>
       <header>
-        <h1 className="home">Logan Merchant</h1>
         <Navbar
           currentNavItem={currentNavItem}
           setCurrentNavItem={setCurrentNavItem}

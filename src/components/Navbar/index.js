@@ -25,6 +25,7 @@ function Navbar({ currentNavItem, setCurrentNavItem, navItems }) {
 
   return (
     <>
+      {windowWidth > 767 && <h1 className="title">Logan Merchant</h1>}
       <Nav justify className="navigation">
         {/* Displays if viewport width is more than 767 */}
         {windowWidth > 767 ? (
@@ -39,7 +40,7 @@ function Navbar({ currentNavItem, setCurrentNavItem, navItems }) {
             `}
                 onClick={() => setCurrentNavItem(item)}
               >
-                <h3>{item}</h3>
+                <h2>{item}</h2>
               </Nav.Item>
             ))}
 
@@ -51,20 +52,21 @@ function Navbar({ currentNavItem, setCurrentNavItem, navItems }) {
                 }
                 download="Logan_Merchant_Resume"
               >
-                <h3>
+                <h2>
                   Resume{" "}
                   <span>
                     <FontAwesomeIcon icon={faFilePdf} />
                   </span>
-                </h3>
+                </h2>
               </a>
             </Nav.Item>
           </>
         ) : (
           // Displays if viewport width is small
           <NavDropdown
-            title={<FontAwesomeIcon icon={faBars} />}
+            title={<FontAwesomeIcon icon={faBars} size="lg" />}
             id="nav-dropdown"
+            style={{ textAlign: "left" }}
           >
             {navItems.map((item, index) => (
               <NavDropdown.Item
@@ -91,6 +93,11 @@ function Navbar({ currentNavItem, setCurrentNavItem, navItems }) {
           </NavDropdown>
         )}
       </Nav>
+      {windowWidth < 767 && (
+        <h1 className="title" style={{ paddingTop: "0" }}>
+          Logan Merchant
+        </h1>
+      )}
     </>
   );
 }
