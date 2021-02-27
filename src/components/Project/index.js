@@ -64,7 +64,7 @@ function Project() {
           <Card className="project-card">
             <Card.Img
               src={project.linkToImage.default}
-              alt="here we are"
+              alt={`Demo of ${project.name}`}
               className="card-img"
             />
             <div className="card-overlay">
