@@ -7,7 +7,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 4rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -38,11 +38,9 @@ a:hover,
   border-bottom: 2px solid var(--french-bistre);
 }
 
-.home {
+.title {
   text-align: center;
   padding: 1em;
-  border: 100px;
-  border-color: black;
 }
 
 .navigation {
@@ -84,13 +82,9 @@ a:hover,
 footer {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
+  padding: 1em;
 }
 
 footer a {
   color: var(--magnolia);
-}
-
-.footer-icon {
-  font-size: 75px;
 }
