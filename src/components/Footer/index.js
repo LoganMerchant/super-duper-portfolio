@@ -14,21 +14,21 @@ function Footer() {
         target="_blank"
         rel="noreferrer"
       >
-        <FontAwesomeIcon icon={faGithubSquare} className="footer-icon" />
+        <FontAwesomeIcon icon={faGithubSquare} size="4x" />
       </a>
       <a
         href="https://www.linkedin.com/in/loganmerchant/"
         target="_blank"
         rel="noreferrer"
       >
-        <FontAwesomeIcon icon={faLinkedin} className="footer-icon" />
+        <FontAwesomeIcon icon={faLinkedin} size="4x" />
       </a>
       <a
         href="https://www.facebook.com/Vivalalogan/"
         target="_blank"
         rel="noreferrer"
       >
-        <FontAwesomeIcon icon={faFacebookSquare} className="footer-icon" />
+        <FontAwesomeIcon icon={faFacebookSquare} size="4x" />
       </a>
     </footer>
   );
