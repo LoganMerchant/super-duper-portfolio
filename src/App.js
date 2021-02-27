@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 
 import "./App.css";
-import Nav from "./components/Nav";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -28,11 +28,15 @@ function App() {
 
   return (
     <>
-      <Nav
-        currentNavItem={currentNavItem}
-        setCurrentNavItem={setCurrentNavItem}
-        navItems={navItems}
-      />
+      <header>
+        <h1 className="home">Logan Merchant</h1>
+        <Navbar
+          currentNavItem={currentNavItem}
+          setCurrentNavItem={setCurrentNavItem}
+          navItems={navItems}
+        />
+      </header>
+
       <main>
         <Container>{renderPage(currentNavItem)}</Container>
       </main>
