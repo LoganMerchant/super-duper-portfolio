@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelopeSquare,
@@ -57,6 +58,26 @@ function Contact() {
   function handleSubmit(evt) {
     evt.preventDefault();
 
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE,
+        process.env.REACT_APP_EMAILJS_TEMPLATE,
+        {
+          from_name: name,
+          from_email: email,
+          message,
+        },
+        process.env.REACT_APP_EMAILJS_USER
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
     // Displays success message for 3 seconds
     setSuccessMessage(true);
 
@@ -82,8 +103,8 @@ function Contact() {
       <Col sm="12" md="4">
         <h3 className="title">Keep in Touch!</h3>
         <p>
-          Got a question, comment, or concern? Fill out the accompanying form
-          and I'll get back to you as soon as possible.
+          Got a question, comment, concern, thought, or idea? Fill out the
+          accompanying form and I'll get back to you as soon as possible.
           <br />
           <br />
           If your business demands a more timely response, reach out via email
