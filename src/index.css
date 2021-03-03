@@ -84,19 +84,10 @@ a:hover,
   color: var(--magnolia);
 }
 
-.contact-icons a:hover {
-  opacity: 0.75;
-}
-
 .submit-btn {
   display: flex;
   justify-content: center;
   padding-bottom: 2em;
-}
-
-#resume-thumbnail:hover {
-  opacity: 0.75;
-  transition: 0.5s;
 }
 
 footer {
@@ -109,6 +100,12 @@ footer a {
   color: var(--magnolia);
 }
 
+footer a:hover {
+  opacity: 0.75;
+}
+
+.project-card a:hover,
+.contact-icons a:hover,
 footer a:hover {
   opacity: 0.75;
 }
