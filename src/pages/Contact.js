@@ -1,3 +1,4 @@
+// Package imports
 import React, { useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,10 +10,12 @@ import {
   faPhoneSquareAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
+// Helper imports
 import { validateEmail, capitalizeFirstLetter } from "../utils/helpers";
 
+// Contact Page
 function Contact() {
-  // Tracks any errors/successful form submits in contact form
+  // Sets up state for error and success messages
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState(false);
 
@@ -26,42 +29,43 @@ function Contact() {
 
   // Handles any changes made to the contact form inputs
   function handleChange(evt) {
-    if (evt.target.name === "email") {
-      const isValid = validateEmail(evt.target.value);
+    setFormState({ ...formState, [evt.target.name]: evt.target.value });
+  }
 
-      if (!isValid) {
-        setErrorMessage("Please enter a valid email.");
-      } else {
-        setErrorMessage("");
-      }
-    } else {
-      if (!evt.target.value.length) {
-        setErrorMessage(
-          `${capitalizeFirstLetter(evt.target.name)} is required.`
-        );
-      } else {
-        setErrorMessage("");
-      }
+  // Validates the form inputs on blur
+  function validateInput(evt) {
+    // Validates email
+    if (evt.target.name === "email") {
+      const isValid = validateEmail(email);
+
+      !isValid
+        ? setErrorMessage("Please enter a valid email.")
+        : setErrorMessage("");
     }
 
-    if (!errorMessage) {
-      setFormState({ ...formState, [evt.target.name]: evt.target.value });
+    // Validates name and message
+    else {
+      !evt.target.value.length
+        ? setErrorMessage(
+            `${capitalizeFirstLetter(evt.target.name)} is required.`
+          )
+        : setErrorMessage("");
     }
   }
 
   // Handles the form submission
   function handleSubmit(evt) {
     evt.preventDefault();
-    console.log(formState);
 
-    // Displays success message
+    // Displays success message for 3 seconds
     setSuccessMessage(true);
+
     setTimeout(function () {
       setSuccessMessage(false);
     }, 3000);
 
     // Clears the form data and form state
-    document.querySelector(`input[name=name]`).value = "";
+    document.querySelector("input[name=name]").value = "";
     document.querySelector("input[name=email]").value = "";
     document.querySelector("textarea[name=message]").value = "";
 
@@ -105,8 +109,9 @@ function Contact() {
               type="text"
               name="name"
               size="sm"
-              defaultValue={name}
+              value={name}
               onChange={handleChange}
+              onBlur={validateInput}
             />
           </Form.Group>
 
@@ -117,8 +122,9 @@ function Contact() {
               type="email"
               name="email"
               size="sm"
-              defaultValue={email}
+              value={email}
               onChange={handleChange}
+              onBlur={validateInput}
             />
           </Form.Group>
 
@@ -130,8 +136,9 @@ function Contact() {
               name="message"
               rows="8"
               size="sm"
-              defaultValue={message}
+              value={message}
               onChange={handleChange}
+              onBlur={validateInput}
             />
           </Form.Group>
 
