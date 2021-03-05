@@ -112,10 +112,12 @@ function Contact() {
         </p>
         <div className="contact-icons">
           <a href="mailto:merchantclogan@gmail.com">
-            <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
-          </a>{" "}
+            <FontAwesomeIcon icon={faEnvelopeSquare} />{" "}
+            <span>merchantclogan@gmail.com</span>
+          </a>
+          <br />
           <a href="tel:801-554-2378">
-            <FontAwesomeIcon icon={faPhoneSquareAlt} size="2x" />
+            <FontAwesomeIcon icon={faPhoneSquareAlt} /> (801) 554-2378
           </a>
         </div>
       </Col>
