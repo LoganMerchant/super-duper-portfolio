@@ -75,8 +75,8 @@ a:hover,
 }
 
 .contact-icons {
-  display: flex;
-  justify-content: space-around;
+  display: block;
+  font-size: x-large;
   padding-bottom: 2em;
 }
 
@@ -113,5 +113,14 @@ footer a:hover {
 @media only screen and (max-width: 767px) {
   body {
     margin: 0 1rem;
+  }
+
+  .project-name,
+  .project-icon {
+    font-size: large;
+  }
+
+  .card-overlay {
+    font-size: smaller;
   }
 }
