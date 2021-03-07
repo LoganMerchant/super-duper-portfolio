@@ -15,6 +15,20 @@ Welcome to the GitHub repository for my portfolio. Feel free to browse around th
 - EmailJS
 - and Good Ol' Fashioned CSS
 
+## Installation
+
+If you'd like to install a copy of this repository, clone it by running this command in your terminal:
+
+`git clone https://github.com/LoganMerchant/super-duper-portfolio.git`
+
+After that is done, you need to install the npm dependencies via this command:
+
+`npm install`
+
+The project should now be installed locally and ready to be ran via:
+
+`npm run start`
+
 ## Purpose
 After browsing through my portfolio, which highlights both individual and group projects of mine, my hope is that you will feel confident that I will make a good candiate for any team or project. Please reach out via any of the links that can be found throughout the application. 
 
