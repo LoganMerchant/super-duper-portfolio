@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the GitHub repository for my portfolio. Feel free to browse around the code, visit the deployed application, and let me know what you think.
+Welcome to the GitHub repository for my portfolio. After browsing through the code and the project itself (which highlights both individual and group projects of mine), my hope is that you will feel confident that I will make a good candiate for any team or project. Please reach out via any of the links that can be found throughout the application.
 
 ## Demo
 
@@ -12,17 +12,23 @@ Welcome to the GitHub repository for my portfolio. Feel free to browse around th
 
 ## Installation
 
-If you'd like to install a copy of this repository, clone it by running this command in your terminal:
+1. If you'd like to install a copy of this repository, clone it by running one of these commands in your terminal:
 
-`git clone https://github.com/LoganMerchant/super-duper-portfolio.git`
+   **HTTPS**
 
-After that is done, you need to install the npm dependencies via this command:
+   `git clone https://github.com/LoganMerchant/super-duper-portfolio.git`
 
-`npm install`
+   **SSH**
 
-The project should now be installed locally and ready to be ran via:
+   `git@github.com:LoganMerchant/super-duper-portfolio.git`
 
-`npm run start`
+2. After that is done, you'll need to install the npm dependencies via this command:
+
+   `npm install`
+
+3. The project should now be installed locally and ready to be ran via:
+
+   `npm run start`
 
 ## Built With
 
@@ -31,10 +37,6 @@ The project should now be installed locally and ready to be ran via:
 - Font Awesome
 - EmailJS
 - and Good Ol' Fashioned CSS
-
-## Purpose
-
-After browsing through my portfolio, which highlights both individual and group projects of mine, my hope is that you will feel confident that I will make a good candiate for any team or project. Please reach out via any of the links that can be found throughout the application.
 
 ## Built By...
 
